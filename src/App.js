@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
+import Header from './components/Header';
+// import Footer from './components/Footer';
+import Routes from './config/Routes'
+
+
+//we installed npm install jquery popper.js
+//carousel implementation 'https://blog.logrocket.com/how-to-use-bootstrap-with-react-a354715d1121/'
+//Bootstrap stuff!
+//  import Bootstrap from '/node_modules/react-bootstrap'
+// import Carousel from 'react-bootstrap/Carousel'
+// import CityCarousel from './partials/CityCarousel'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div 
+    className='cities-index' 
+    style={{
+      // backgroundColor: '#383838',
+      backgroundImage: `url('${process.env.PUBLIC_URL}/images/header.jpg')`,
+      // backgroundPosition: "bottom"
+    }}
+    >
+     
+      <Header/>
+      <Routes/>
+      {/* <Footer/> */}
+      
     </div>
   );
 }

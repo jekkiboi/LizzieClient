@@ -1,38 +1,351 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Bellota+Text&display=swap');
+
+
+.city-name{
+  font-family: 'Bellota Text', 'Sans';
+  color: white;
+  font-size:30vh;
+  font-weight: 800;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.city-undertitle{
+  font-family: 'Bellota Text', 'Sans';
+  color: rgb(70, 219, 245);
+  font-size: 10vh;
+  margin-top: -12px;
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.articles{
+  font-family: 'Bellota Text', 'Sans';
+  font-weight: 600;   
+  color: white;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.articles:visited{
+  font-family: 'Bellota Text', 'Sans';
+  font-weight: 600;   
+  color: white;
+}
+.articles:hover{
+  font-family: 'Bellota Text', 'Sans';
+  font-weight: 600;   
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.createarticles{
+  font-family: 'Bellota Text', 'Sans';
+  font-weight: 600;   
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.createarticles:hover{
+  font-family: 'Bellota Text', 'Sans';
+  font-weight: 700;   
+  color: rgb(129, 125, 125);
+  text-decoration: none;
+  padding: 5px;
+  background-color: rgba(243, 243, 245, 0.83);
+  transition: .7s;
+}
+.ProseMirror{
+  font-family: 'Bellota Text', 'Sans';
+  color: white;
+}
+.city-articles{
+  font-family: 'Bellota Text', 'Sans';
+  color: white;
+}
+.city-image{
+  width: 90vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.inlineheader{
+  display:flex;
+  justify-content: space-between;
+}
+.header {
+  /* border: 1px solid black; */
+  font-family: 'Bellota Text', 'Sans';
+  font-size: 30px;
+  color: white;
+  padding: 5px;
+  background: rgba(251, 252, 252, 0.583);
+  display: float;
+}
+.logobanner {
+  display: inline;
+  width: 200px;
+  height: 65px;
+}
+.something{
+  justify-content: baseline;
+  align-content: space-between;
+  list-style-type: none;
+  display: flex;
+  text-align:right;
+  align-self:flex-end;
+  margin: 0;
+}
+.headerlinks{
+  margin-right: 0%;
+  display: flex;
+  justify-items: space-between;
+}
+.search{
+  padding-right: 2px;
+}
+
+.pics{
+  height: 400px;
+  width: 450px;
+  margin:auto;
+  padding: 15px;
+}
+
+.item{
+  background: white;
+  display: block;
+  height: 475px;
+  width: 450px;
+  margin:auto;
+  border: 1px solid black;
+  /* background: grey; */
+}
+.carousel-indicators{
+  opacity: 0;
+}
+.caption{
+  font-family: 'Rock Salt';
+  margin: auto;
+}
+.home-city-carousel {
+  padding-top: 5%;
+}
+
+.create-post { 
+  font-size: 1.1em; 
+  width: 200px;
+}
+.input-text {
+  color: black;
+}
+/* .App{
+  background-position: fixed center;
+  background-size: cover;
+  
+} */
+/* .city-show-page{
+} */
+
+
+/* Styling the Index Carousel */
+/* .carousel-pics{
+} */
+.city-image{
+  width:50vw;
+  height:66vh;
+  margin: auto;
+}
+
+
+.cityindeximage{
+  /* width:400px; */
+  width:25vw;
+  /* height: 300px; */
+  height:33vh;
+  margin: auto;
+}
+.cities-index{
+  margin: 0 auto;
+  background-position: fixed center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.carousel-container{
+  padding:1em;
+  background-color: rgba(124, 123, 123, 0.707);
+}
+.carousel-index{
+  text-align: center;
+}
+.imageandtext p{
+  width:30vw;
+  /* padding:10%; */
+}
+.imageandtext p{
+  margin: 0;
+  display: block;
+  position: absolute;
+  /* top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  text-align:right;
+  font-family: 'Bellota Text', 'Sans';
+}
+.imageandtext img{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.imageandtext img:hover{
+/* background: #000; */
+/* opacity: 0.5; */
+transition:.3s;
+filter:grayscale(0%);
+}
+.imageandtext p{
+  font-size: 2em;
+  font-weight: 800;
+  color: white;
+  width:6em;
+  font-family: 'Bellota Text', 'Sans';
+  bottom:4.5vw; 
+  position:absolute;
+  text-align: center;
+  margin-left:9vw;
+  text-shadow: .25px .25px 0 #000,
+    -.25px .25px 0 #000,
+    .25px -.25px 0 #000,
+    -.25px -.25px 0 #000,
+    0px .25px 0 #000,
+    0px -.25px 0 #000,
+    -.25px 0px 0 #000,
+    .25px 0px 0 #000,
+    .5px .5px 0 #000,
+    -.5px .5px 0 #000,
+    .5px -.5px 0 #000,
+    -.5px -.5px 0 #000,
+    0px .5px 0 #000,
+    0px -.5px 0 #000,
+    -.5px 0px 0 #000,
+    .5px 0px 0 #000,
+    .25px .5px 0 #000,
+    -.25px .5px 0 #000,
+    .25px -.5px 0 #000,
+    -.25px -.5px 0 #000,
+    .5px .25px 0 #000,
+    -.5px .25px 0 #000,
+    .5px -.25px 0 #000,
+    -.5px -.25px 0 #000; 
   }
-  to {
-    transform: rotate(360deg);
-  }
+.lank{
+  color: rgb(70, 219, 245);
+  text-decoration:none;
+}
+.lank:visited{
+  color: rgb(70, 219, 245);
+  text-decoration:none;
+}
+.lank:hover{
+  color: rgb(52, 161, 181);
+  transition:.3s;
+  text-decoration:none;
+}
+
+
+a{
+  font-family: "Bellota Text", sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 1.3em;
+}
+a:visited{
+  font-family: "Bellota Text", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+a:hover{
+  font-family: "Bellota Text", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+.main-city-show-page{
+    margin: 0 auto;
+    background-position: fixed center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.main{
+  padding: 20px;
+}
+.submit-button {
+  font-family: "Bellota Text", sans-serif;
+  color: black;
+}
+.delete-button {
+  background-color: rgba(252, 252, 252, 0);
+  border: 0;
+  color: white;
+  margin: auto;
+  margin-top: 10px;
+  padding: 7px 10px;
+  font-size: 1.2em;
+  /* width: 100px; */
+}
+.delete-button:hover {
+  background-color: rgba(252, 252, 252, 0.308);
+  transition: .5s;
+}
+.delete-button-wrapper {
+  position: float;
+  margin: auto;
+}
+
+
+.sign-up-form-css {
+  font-family: "Bellota Text", sans-serif;
+  color: white;
+  font-size: 1.3em;
+  width: 300px;
+  height: 370px;
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 20%;
+  margin: auto;
+  margin-top: 20%;
+  background-color: rgba(255,255,255,0.5);
+}
+.login-form-css {
+  font-family: "Bellota Text", sans-serif;
+  color: white;
+  font-size: 1.3em;
+  width: 300px;
+  height: 370px;
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 300px;
+  border-radius: 20%;
+  margin: auto;
+  margin-top: 20%;
+  background-color: rgba(255,255,255,0.5);
+}
+.new-city-form {
+  font-family: "Bellota Text", sans-serif;
+  color: white;
+  font-size: 1.2em;
+  width: 300px;
+  height: 300px;
+  padding-left: 50px;
+  padding-top: 30px;
+  border-radius: 20%;
+  margin: auto;
+  background-color: rgba(255,255,255,0.5);
+}
+.slick-next:before{
+  font-size: 30px;
+}
+.slick-prev:before{
+  font-size: 30px;
+}
+.plus-sign{
+  width: 6vh;
+  margin-top: 0px;
+  margin-left: 20px;
+
 }
