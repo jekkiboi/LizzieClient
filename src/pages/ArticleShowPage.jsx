@@ -49,10 +49,10 @@ class ArticleShowPage extends React.Component {
 //   renderArticles = () => {
 //     let articlesJSX = this.state.articles.map((article) => {
 //       return (
-//         <div className="city-articles">
+//         <div className="">
 //           <ul>
 //             <li>
-//               <a href={`/cities/${this.props.match.params.id}/${article._id}`}>
+//               <a href={`/articles/${this.props.match.params.id}/${article._id}`}>
 //                 {article.content}
 //               </a>
 //               {/* render as links to article */}
@@ -66,7 +66,7 @@ class ArticleShowPage extends React.Component {
 //   };
   render() {
     return (
-      <div className="main-city-show-page" style={{
+      <div className="" style={{
         // backgroundColor: '#383838',
         backgroundImage: `url('${process.env.PUBLIC_URL}/images/BG.jpg')`,
         backgroundPosition: "bottom",
@@ -74,15 +74,15 @@ class ArticleShowPage extends React.Component {
       }}>
         <div>
         <br/>
-          <h1 className="city-name">{this.state.article}</h1>
+          <h1 className="">{this.state.article}</h1>
         <br/>
-          <h2 className="city-undertitle">Find out more about {this.state.article}...</h2>
+          <h2 className="">Find out more about {this.state.article}...</h2>
         <br/>
         <br/>
         <br/>
-            <img className="city-image" src={this.state.image} alt="" />
+            <img className="" src={this.state.image} alt="" />
 
-          <div className="city-show-body">
+          <div className="">
             <h2>
                 <p className="delete-button-wrapper">
                     <button className='delete-button submit-button' 

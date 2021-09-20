@@ -3,7 +3,7 @@ import React from 'react'
 import Header from './components/Header';
 // import Footer from './components/Footer';
 import Routes from './config/Routes'
-
+// import { Switch, Route } from 'react-router-dom';
 
 //we installed npm install jquery popper.js
 //carousel implementation 'https://blog.logrocket.com/how-to-use-bootstrap-with-react-a354715d1121/'

@@ -150,26 +150,8 @@
 }
 
 
-.cityindeximage{
-  /* width:400px; */
-  width:25vw;
-  /* height: 300px; */
-  height:33vh;
-  margin: auto;
-}
-.cities-index{
-  margin: 0 auto;
-  background-position: fixed center;
-  background-size: cover;
-  min-height: 100vh;
-}
-.carousel-container{
-  padding:1em;
-  background-color: rgba(124, 123, 123, 0.707);
-}
-.carousel-index{
-  text-align: center;
-}
+
+
 .imageandtext p{
   width:30vw;
   /* padding:10%; */
@@ -245,24 +227,6 @@ filter:grayscale(0%);
 }
 
 
-a{
-  font-family: "Bellota Text", sans-serif;
-  font-weight: 600;
-  color: white;
-  font-size: 1.3em;
-}
-a:visited{
-  font-family: "Bellota Text", sans-serif;
-  color: white;
-  font-weight: 600;
-  font-size: 1.3em;
-}
-a:hover{
-  font-family: "Bellota Text", sans-serif;
-  color: white;
-  font-weight: 600;
-  font-size: 1.3em;
-}
 .main-city-show-page{
     margin: 0 auto;
     background-position: fixed center;
@@ -337,12 +301,7 @@ a:hover{
   margin: auto;
   background-color: rgba(255,255,255,0.5);
 }
-.slick-next:before{
-  font-size: 30px;
-}
-.slick-prev:before{
-  font-size: 30px;
-}
+
 .plus-sign{
   width: 6vh;
   margin-top: 0px;

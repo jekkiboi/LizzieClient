@@ -27,7 +27,7 @@ function Routes(){
         
         <Route path='/articles' component={ArticlesIndexPage} />
 
-        {/* <Route path='/cities/:id' exact render={()=>{
+        {/* <Route path='/articles/:id' exact render={()=>{
           <CityShowPage cityData={cityData}/>}} /> */}
 
         

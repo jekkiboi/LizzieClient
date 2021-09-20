@@ -2,7 +2,6 @@ import { Component } from "react";
 import ArticleModel from "../models/ArticleModel";
 import ArticleShowPage from "../pages/ArticleShowPage";
 import { Link } from "react-router-dom";
-// import IndexCarousel from "../partials/IndexCarousel";
 // const axios = require('axios').default;
 import axios from "axios";
 import Header from "../components/Header";
@@ -40,11 +39,11 @@ class ArticlesIndexPage extends Component {
             backgroundPosition: "bottom",
         }}
         >
-            <div className="head">{/* <Header /> */}</div>
+            <div className="head"><Header /></div>
             <div className="main">
 
                 <Link  to="/create"> 
-                    <img className='plus-sign' src={`${process.env.PUBLIC_URL}/images/plussign.png`} />
+                    {/* <img className='plus-sign' src={`${process.env.PUBLIC_URL}/images/plussign.png`} /> */}
                 </Link>  
             </div>
         </div>

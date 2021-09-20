@@ -12,7 +12,7 @@ function Header(){
                 <Link to='./signup' className='lank'> Sign-Up </Link> &nbsp;
                 <Link to='./login' className='lank'> Login </Link> &nbsp;
 
-                <li className='cities-link'><Link to='./cities' className='lank'>Cities</Link></li>&nbsp;
+                <li className='cities-link'><Link to='./articles' className='lank'>Articles</Link></li>&nbsp;
                     </ul>
                 </span>
             </span>
