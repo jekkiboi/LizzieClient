@@ -1,3 +1,4 @@
+//UPLOAD CARE API KEY= `4a022e7b929332d401c9`
 import { render } from '@testing-library/react'
 import React from 'react'
 import { Component } from "react";
@@ -22,7 +23,7 @@ class CreateArticle extends Component{
         console.log("form was submitted");
         // start out by making the axios api call to ur db in the backend, need to hit the POST route and create a new article, need the underlying route to match what is set up in the express server
         axios
-          .post(`${process.env.REACT_APP_SERVER_URL}/api/articles`, {
+          .post(`localhost:3000/api/articles`, {
             //pass in the object of the new article, containing the actual data that is to be added, for now it is only the name of the article
             article: this.state.inputVal,
             image: this.state.inputImage,
@@ -46,7 +47,13 @@ class CreateArticle extends Component{
         
     return(
     <div>
-        <div className="new-city-form">
+     
+        <div className="" style={{
+        backgroundColor: '#228B22',
+        backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg1.png')`,
+        backgroundPosition: "bottom",
+        backgroundSize: "fill"}}
+        >
             <h2>Create Post</h2>
 
             { <form onSubmit={this.handleFormSubmit}>

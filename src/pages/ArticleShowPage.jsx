@@ -67,8 +67,8 @@ class ArticleShowPage extends React.Component {
   render() {
     return (
       <div className="" style={{
-        // backgroundColor: '#383838',
-        backgroundImage: `url('${process.env.PUBLIC_URL}/images/BG.jpg')`,
+        backgroundColor: '#228B22',
+        backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg1.png')`,
         backgroundPosition: "bottom",
         backgroundSize: "fill"
       }}>

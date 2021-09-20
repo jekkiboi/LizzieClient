@@ -21,16 +21,9 @@ function Routes(){
           
         {/* <Route path='/articles/:id' exact component={ArticleShowPage} /> */}
 
-        
-        
         <Route exact path='/articles/:id'render={(props)=> <ArticleShowPage {...props} />} />
         
         <Route path='/articles' component={ArticlesIndexPage} />
-
-        {/* <Route path='/articles/:id' exact render={()=>{
-          <CityShowPage cityData={cityData}/>}} /> */}
-
-        
 
         <Route path='/create' render={(props) => <CreateArticle {...props} /> } />
 

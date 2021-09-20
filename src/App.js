@@ -18,7 +18,7 @@ function App() {
     className='cities-index' 
     style={{
       // backgroundColor: '#383838',
-      backgroundImage: `url('${process.env.PUBLIC_URL}/images/header.jpg')`,
+      backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg1.jpg')`,
       // backgroundPosition: "bottom"
     }}
     >

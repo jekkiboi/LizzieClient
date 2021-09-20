@@ -4,8 +4,6 @@ import ArticleShowPage from "../pages/ArticleShowPage";
 import { Link } from "react-router-dom";
 // const axios = require('axios').default;
 import axios from "axios";
-import Header from "../components/Header";
-import CreateArticle from "../pages/CreateArticle"
 
 // Steps to render the list of Articles
 // - Create a component for each Article
@@ -35,15 +33,14 @@ class ArticlesIndexPage extends Component {
         <div
         className="cities-index"
         style={{
-            backgroundImage: `url('${process.env.PUBLIC_URL}/images/BGcopy.jpg')`,
+            backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg1.png')`,
             backgroundPosition: "bottom",
         }}
         >
-            <div className="head"><Header /></div>
             <div className="main">
 
                 <Link  to="/create"> 
-                    {/* <img className='plus-sign' src={`${process.env.PUBLIC_URL}/images/plussign.png`} /> */}
+                    <img className='plus-sign' src={`${process.env.PUBLIC_URL}/images/plussign.png`} />
                 </Link>  
             </div>
         </div>
