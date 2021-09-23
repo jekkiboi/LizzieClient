@@ -21,6 +21,7 @@ class ArticlesIndexPage extends Component {
     });
   };
 
+//lifecycle method the runs automatically when the component loads
   componentDidMount = () => {
     console.log("mounted");
     //make fetch called here, or at least reference the game model which has it
@@ -28,20 +29,26 @@ class ArticlesIndexPage extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
         <div
-        className="cities-index"
+        className="main"
         style={{
-            backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg1.png')`,
+            backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg.png')`,
             backgroundPosition: "bottom",
         }}
         >
-            <div className="main">
-
+          <span className='add-article'> 
+            <h3 className='add-article-title'>Add an Article</h3>
+            <div>
                 <Link  to="/create"> 
                     <img className='plus-sign' src={`${process.env.PUBLIC_URL}/images/plussign.png`} />
                 </Link>  
+            </div>
+            </span>
+            <div className="generated-articles">
+              {this.state.articleData.map((articleObj, i)=> {
+                  return<Link to={`/articles/${articleObj._id}`} key={i}>{articleObj.title}</Link>
+              })}
             </div>
         </div>
     );

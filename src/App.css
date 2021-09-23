@@ -1,45 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Bellota+Text&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Bellota+Text&display=swap'); */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .city-name{
-  font-family: 'Bellota Text', 'Sans';
+  font-family: 'Open Sans';
   color: white;
   font-size:30vh;
   font-weight: 800;
   text-align: center;
 }
 .city-undertitle{
-  font-family: 'Bellota Text', 'Sans';
+  font-family: 'Open Sans';
   color: rgb(70, 219, 245);
   font-size: 10vh;
   margin-top: -12px;
   text-align: center;
 }
 .articles{
-  font-family: 'Bellota Text', 'Sans';
+  font-family: 'Open Sans';
   font-weight: 600;   
   color: white;
 }
 .articles:visited{
-  font-family: 'Bellota Text', 'Sans';
+  font-family: 'Open Sans';
   font-weight: 600;   
   color: white;
 }
 .articles:hover{
-  font-family: 'Bellota Text', 'Sans';
+  font-family: 'Open Sans';
   font-weight: 600;   
   color: white;
+}
+.generated-articles{
+  text-decoration: none;
+  color: white;
+  font-size:3em;
+}
+a{
+  display:flex;
+  color: rgb(253, 253, 253);
+  text-decoration:none;
+ 
+}
+a:visited{
+  color: rgb(255, 255, 255);
+  text-decoration:none;
+}
+a:hover{
+  color: rgb(163, 233, 187);
+  transition:.3s;
+  text-decoration:none;
 }
 
 .createarticles{
-  font-family: 'Bellota Text', 'Sans';
+  font-family: 'Open Sans';
   font-weight: 600;   
   color: white;
 }
-
 .createarticles:hover{
-  font-family: 'Bellota Text', 'Sans';
+  font-family: 'Open Sans';
   font-weight: 700;   
   color: rgb(129, 125, 125);
   text-decoration: none;
@@ -48,18 +67,24 @@
   transition: .7s;
 }
 .ProseMirror{
-  font-family: 'Bellota Text', 'Sans';
+  font-family: 'Open Sans';
   color: white;
 }
-.city-articles{
-  font-family: 'Bellota Text', 'Sans';
+
+
+.footer{
+  font-size: 30px;
   color: white;
+  padding: 5px;
+  background: rgba(251, 252, 252, 0.583);
+  position:fixed;
+  bottom:0;
+  width:100%;
+  height:60px;   /* Height of the footer */
 }
-.city-image{
-  width: 90vh;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.inlinefooter{
+  display:flex;
+  justify-content: space-between;
 }
 .inlineheader{
   display:flex;
@@ -67,17 +92,43 @@
 }
 .header {
   /* border: 1px solid black; */
-  font-family: 'Bellota Text', 'Sans';
+  font-family: 'Open Sans';
   font-size: 30px;
   color: white;
   padding: 5px;
   background: rgba(251, 252, 252, 0.583);
   display: float;
 }
+.logofooter{
+  display: inline;
+  margin-left: 1vw;
+  width: 4.5em;
+  height: 1.5em; 
+}
 .logobanner {
   display: inline;
-  width: 200px;
-  height: 65px;
+  width: 4.5em;
+  height: 4em;
+}
+.logobanner:hover{
+  display: inline;
+  width: 5.5em;
+  height: 5em;
+  transition: 1s;
+}
+.footerlinks{
+  margin-top: 1vh;
+  bottom:0;
+}
+.footerlinklist{
+  justify-content: baseline;
+  align-content: space-between;
+  list-style-type: none;
+  display: flex;
+  text-align:right;
+  align-self:flex-end;
+  margin: 0;
+  bottom:0;
 }
 .something{
   justify-content: baseline;
@@ -96,14 +147,12 @@
 .search{
   padding-right: 2px;
 }
-
 .pics{
   height: 400px;
   width: 450px;
   margin:auto;
   padding: 15px;
 }
-
 .item{
   background: white;
   display: block;
@@ -113,17 +162,10 @@
   border: 1px solid black;
   /* background: grey; */
 }
-.carousel-indicators{
-  opacity: 0;
-}
 .caption{
   font-family: 'Rock Salt';
   margin: auto;
 }
-.home-city-carousel {
-  padding-top: 5%;
-}
-
 .create-post { 
   font-size: 1.1em; 
   width: 200px;
@@ -131,27 +173,30 @@
 .input-text {
   color: black;
 }
-/* .App{
-  background-position: fixed center;
-  background-size: cover;
-  
-} */
-/* .city-show-page{
-} */
-
-
-/* Styling the Index Carousel */
-/* .carousel-pics{
-} */
-.city-image{
-  width:50vw;
-  height:66vh;
-  margin: auto;
+.input-content {
+  width:400px;
+  font-size:14pt;
+  color: black;
+}
+.homepage-css{
+  padding: 39vh;
+  background-size: 115vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: -15vh;
+  height:20px;
 }
 
+h1{
+  color:rgba(243, 243, 245);
+}
+h2{
+  color: rgb(125, 129, 125);
+}
 
-
-
+.app-index{
+  min-height: 150vh;
+}
 .imageandtext p{
   width:30vw;
   /* padding:10%; */
@@ -165,7 +210,7 @@
   right: 0;
   bottom: 0; */
   text-align:right;
-  font-family: 'Bellota Text', 'Sans';
+  font-family: 'Open Sans';
 }
 .imageandtext img{
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
@@ -182,12 +227,12 @@ filter:grayscale(0%);
   font-weight: 800;
   color: white;
   width:6em;
-  font-family: 'Bellota Text', 'Sans';
+  font-family: 'Open Sans';
   bottom:4.5vw; 
   position:absolute;
   text-align: center;
   margin-left:9vw;
-  text-shadow: .25px .25px 0 #000,
+  /* text-shadow: .25px .25px 0 #000,
     -.25px .25px 0 #000,
     .25px -.25px 0 #000,
     -.25px -.25px 0 #000,
@@ -210,7 +255,7 @@ filter:grayscale(0%);
     .5px .25px 0 #000,
     -.5px .25px 0 #000,
     .5px -.25px 0 #000,
-    -.5px -.25px 0 #000; 
+    -.5px -.25px 0 #000;  */
   }
 .lank{
   color: rgb(49, 85, 28);
@@ -221,11 +266,38 @@ filter:grayscale(0%);
   text-decoration:none;
 }
 .lank:hover{
-  color: rgb(112, 244, 156);
+  color: rgb(99, 208, 135);
   transition:.3s;
   text-decoration:none;
 }
 
+a#basic-nav-dropdown.dropdown-toggle.nav-link{
+  color: rgb(49, 85, 28);
+  text-decoration:none;
+}
+a#basic-nav-dropdown.dropdown-toggle.nav-link:visited{
+  color: rgb(49, 85, 28);
+  text-decoration:none;
+}
+a#basic-nav-dropdown.dropdown-toggle.nav-link:hover{
+  color: rgb(61, 102, 75);
+  transition:.3s;
+  text-decoration:none;
+}
+
+a.nav-link{
+  color: rgb(49, 85, 28);
+  text-decoration:none;
+}
+a.nav-link:visited{
+  color: rgb(49, 85, 28);
+  text-decoration:none;
+}
+a.nav-link:hover{
+  color: rgb(99, 208, 135);
+  transition:.3s;
+  text-decoration:none;
+}
 
 .main-city-show-page{
     margin: 0 auto;
@@ -233,12 +305,31 @@ filter:grayscale(0%);
     background-size: cover;
     min-height: 100vh;
 }
-
 .main{
+  min-height: 150vh;
   padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.add-article{
+  display:flex;
+  padding: 3px;
+}
+.add-article-title{
+  color:rgba(243, 243, 245);
+  margin-top: 1vh;
+  /* margin-left: 3vw;
+  margin-right: -2vw; */
+  font-size: 3em;
+}
+.plus-sign{
+  width: 3em;
+  margin-top: .3em;
+  margin-left: 1em;
 }
 .submit-button {
-  font-family: "Bellota Text", sans-serif;
+  font-family: 'Open Sans';
   color: black;
 }
 .delete-button {
@@ -259,10 +350,8 @@ filter:grayscale(0%);
   position: float;
   margin: auto;
 }
-
-
 .sign-up-form-css {
-  font-family: "Bellota Text", sans-serif;
+  font-family: 'Open Sans';
   color: white;
   font-size: 1.3em;
   width: 300px;
@@ -276,7 +365,7 @@ filter:grayscale(0%);
   background-color: rgba(255,255,255,0.5);
 }
 .login-form-css {
-  font-family: "Bellota Text", sans-serif;
+  font-family: 'Open Sans';
   color: white;
   font-size: 1.3em;
   width: 300px;
@@ -290,7 +379,7 @@ filter:grayscale(0%);
   background-color: rgba(255,255,255,0.5);
 }
 .new-city-form {
-  font-family: "Bellota Text", sans-serif;
+  font-family: 'Open Sans';
   color: white;
   font-size: 1.2em;
   width: 300px;
@@ -301,10 +390,12 @@ filter:grayscale(0%);
   margin: auto;
   background-color: rgba(255,255,255,0.5);
 }
-
-.plus-sign{
-  width: 6vh;
-  margin-top: 0px;
-  margin-left: 20px;
-
+.title-line{
+  display: flex;
+}
+.article-pic{
+  width: 14em;
+  margin: 0 auto;
+  display: block;
+  /* position: absolute; */
 }

@@ -12,7 +12,7 @@ class ArticleModel {
                 console.log(err)
                 // show user a message describing error
 
-            })
+        })
     }
     // will make  fetch call to get a single game by it's id
     static show(articleId){

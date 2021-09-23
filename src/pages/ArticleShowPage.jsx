@@ -2,47 +2,50 @@ import "../articleShowPage.css";
 import React from "react";
 import axios from "axios";
 import ArticleModel from "../models/ArticleModel";
-import { Link } from "react-router-dom";
-// fetch data for the game in particular by it's id
+import { Link, Redirect } from "react-router-dom";
+// fetch data for the  in particular by it's id
 /*
  */
 class ArticleShowPage extends React.Component {
   state = {
-    Article: "",
+    title: "",
+    content: "",
+    image: "",
+    shouldRedirect: false
     // articlePreview: [],
   };
-
-
   /////////NEED BOTH DELETE FUNCTIONS/////////////
   handleDelete = (id) => {
     axios.delete(`${process.env.REACT_APP_SERVER_URL}/api/articles/${id}`)
     .then(() => {
-     this.props.deleteArticle(id)
+      this.setState({shouldRedirect: true})
     })
   }
-
-  deleteArticle = (id) => {
-    console.log("delete article activated");
-    const articleDataArray = this.state.articleData.filter((articleObj) => {
-      console.log(this.articleObj._id, id);
-      if (this.articleObj._id == id) {
-        return false;
-      } else {
-        return true;
-      }
-    });
-    this.setState({ articleData: articleDataArray });
-  };
+  
+  // deleteArticle = (id) => {
+  //   console.log("delete article activated");
+  //   const articleDataArray = this.state.article.filter((articleObj) => {
+  //     console.log(this.articleObj._id, id);
+  //     if (this.articleObj._id == id) {
+  //       return false;
+  //     } else {
+  //       return true;
+  //     }
+  //   });
+  //   this.setState({ articleData: articleDataArray });
+  // };
 //////////////////////////////
-
+//mounting component setting state and article is set inside state
+//this fetches data
   componentDidMount() {
     const articleId = this.props.match.params.id;
     console.log(articleId);
     ArticleModel.show(articleId).then((data) => {
+      console.log('yippe data');
       console.log(data);
 
       this.setState({
-        article: data.article
+        article: data
       });
     });
   }
@@ -65,34 +68,45 @@ class ArticleShowPage extends React.Component {
 //     return articlesJSX;
 //   };
   render() {
+    if(this.state.shouldRedirect===true){
+      return(
+      <Redirect to={`/articles`} />
+      )}
+    if(!this.state.article){
+      return <h1>No posts yet!</h1>
+    }
     return (
       <div className="" style={{
         backgroundColor: '#228B22',
-        backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg1.png')`,
+        backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg.png')`,
         backgroundPosition: "bottom",
         backgroundSize: "fill"
       }}>
         <div>
-        <br/>
-          <h1 className="">{this.state.article}</h1>
-        <br/>
-          <h2 className="">Find out more about {this.state.article}...</h2>
-        <br/>
-        <br/>
-        <br/>
-            <img className="" src={this.state.image} alt="" />
-
-          <div className="">
+          <span className='title-line'> 
             <h2>
                 <p className="delete-button-wrapper">
                     <button className='delete-button submit-button' 
-                    onClick={() => this.handleDelete(this.props.articleObj._id)}> 
+                    onClick={() => this.handleDelete(this.state.article._id)}> 
                         Delete Article
                     </button> 
                 </p>
             </h2>
+          </span>
+          <h1 className="">{this.state.article.title}</h1>
+        <br/>
+          <h2 className="">{this.state.article.content}</h2>
+        <br/>
+        <br/>
+        <br/>
+            <img className="article-pic" src={this.state.article.image} alt="" />
+
+          <div className="">
+         
           </div>
         </div>
+        <br />
+        <br />
       </div>
     );
   }

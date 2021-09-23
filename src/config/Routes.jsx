@@ -5,6 +5,7 @@ import ArticleShowPage from '../pages/ArticleShowPage';
 import { Switch, Route } from 'react-router-dom';
 import CreateArticle from '../pages/CreateArticle';
 import ArticleModel from '../models/ArticleModel'
+import About from '../pages/About';
 
 import SignupPage from '../pages/SignupPage';
 import LoginPage from '../pages/LoginPage'
@@ -24,6 +25,8 @@ function Routes(){
         <Route exact path='/articles/:id'render={(props)=> <ArticleShowPage {...props} />} />
         
         <Route path='/articles' component={ArticlesIndexPage} />
+
+        <Route path='/about' exact component={About} />
 
         <Route path='/create' render={(props) => <CreateArticle {...props} /> } />
 

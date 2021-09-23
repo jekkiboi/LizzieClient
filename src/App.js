@@ -1,8 +1,10 @@
 import './App.css';
 import React from 'react'
 import Header from './components/Header';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import Routes from './config/Routes'
+import { bounce } from 'react-animations'
+// import firebase from './firebase'
 // import { Switch, Route } from 'react-router-dom';
 
 //we installed npm install jquery popper.js
@@ -13,20 +15,23 @@ import Routes from './config/Routes'
 // import CityCarousel from './partials/CityCarousel'
 
 function App() {
+
+  // const [loading, setLoading] = useState(false)
+  // const ref = firebase.firestore().collection("Lizzie")
+  // if(loading){
+  //   return <h1>Loading...</h1>
+  // }
+
   return (
-     <div 
-    className='cities-index' 
+    <div 
+    className='app-index' 
     style={{
-      // backgroundColor: '#383838',
-      backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg1.jpg')`,
-      // backgroundPosition: "bottom"
+      backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg.png')`,
     }}
     >
-     
       <Header/>
       <Routes/>
-      {/* <Footer/> */}
-      
+      <Footer/>
     </div>
   );
 }
