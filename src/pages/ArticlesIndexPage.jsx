@@ -10,10 +10,11 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 
 export default function ArticlesIndexPage(){
-  // state = {articleData: []};
+  const { getAccessTokenSilently } = useAuth0()
   const [articleData, setArticleData] = useState([])
 
   async function handleSubmit(e){
+    const token = await getAccessTokenSilently()
     e.preventDefault()
 
   fetch(`${process.env.REACT_APP_SERVER_URL}/articles`, {
@@ -24,7 +25,7 @@ export default function ArticlesIndexPage(){
     mode: 'cors',
     headers: {
         'Content-Type': 'application/json',
-        'Authorization' : `Bearer $`
+        'Authorization' : `Bearer ${token}`
     },
     body: JSON.stringify({ data: articleData }),
   })
@@ -61,7 +62,7 @@ export default function ArticlesIndexPage(){
             </div>
             </span>
             <div className="generated-articles">
-              {this.state.articleData.map((articleObj, i)=> {
+              {articleData.map((articleObj, i)=> {
                   return<Link to={`/articles/${articleObj._id}`} key={i}>{articleObj.title}</Link>
               })}
             </div>

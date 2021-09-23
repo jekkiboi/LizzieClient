@@ -27,16 +27,16 @@ function Header() {
     <div>
       <div className='header'>
         <span className='inlineheader'>
-          <Navbar.Brand href="/">
+          <Link to="/">
             <img className='logobanner'src={`${process.env.PUBLIC_URL}/images/Ldot.png`}/>
-          </Navbar.Brand>
+          </Link>
           <span className="headerlinks">
             <Navbar expand="lg">
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
-                    <Nav.Link href="/about">About</Nav.Link>
-                    <Nav.Link href="/articles">Articles</Nav.Link>
+                    <Link to="/about">About</Link>
+                    <Link to="/articles">Articles</Link>
                     <NavDropdown.Divider />
                     <NavDropdown title="PIC" id="basic-nav-dropdown" >
                     {/* <NavDropdown.Item href="./login" className='lank'>{ navItems }</NavDropdown.Item> */}
