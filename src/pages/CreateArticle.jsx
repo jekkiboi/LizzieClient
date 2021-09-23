@@ -1,16 +1,28 @@
 //UPLOAD CARE API KEY= `4a022e7b929332d401c9`
-import { render } from '@testing-library/react'
+// import { render } from '@testing-library/react'
 import React from 'react'
-import { Component } from "react";
 import axios from "axios";
-class CreateArticle extends Component{
-    state={
+import Upload from '../components/Upload'
+import { Component } from "react";
+import { useState } from "react"
+import { useAuth0 } from '@auth0/auth0-react'
+
+  export default function CreateArticle(){
+  //lines 5 10 and 18 from protectedPage
+  const [newArticleData, setNewArticleData] = useState([])
+  
+      state={
         articleData: [],
         inputVal: "",
         content: "",
         // selectedFile: null,
         inputImage: ""
     }
+
+    async function handleSubmit(e){
+      e.preventDefault()
+
+
       handleChange = (event) => {
         this.setState({ inputVal: event.target.value });
       };
@@ -23,46 +35,13 @@ class CreateArticle extends Component{
       handleFormSubmit = (event) => {
         event.target.value = ""
 
-
-///////////////////////////////////////////
-        // service firebase.storage {
-        //   match /b/{bucket}/o {
-        //     match /{allPaths=**} {
-        //       allow read, write: if request.auth != null;
-        //     }
-        //   }
-        // }
-/////////////////////////////////////////////
-
-      // const { initializeApp } = require('firebase/app');
-      // const { getFirestore, collection, getDocs } = require('firebase/firestore');
-
-      // fileSelectedHandler = event => {
-      //   this.setState({
-      //     selectedFile: event.target.files[0]
-      //   })
-      // }
-      // fileUploadHandler = event => {
-      //   const fd = new FormData();
-      //   fd.append('upload', this.state.selectedFile, this.state.selectedFile.name)
-      //     axios.post('gs://lizzie-37310.appspot.com', fd, {
-      //       onUploadProgress: progressEvent => {
-      //         console.log('Upload Progress: ' + Math.round(progressEvent.loaded / progressEvent.total * 100) + '%')
-      //       }
-      //     })
-      //   .then(res =>{
-      //     console.log(res)
-      //   })
-      // }
-/////////////////////////////////////////////////
-
         event.preventDefault();
         console.log("form was submitted");
         // start out by making the axios api call to ur db in the backend, 
         //need to hit the POST route and create a new article, need the underlying route 
         //to match what is set up in the express server
         axios
-          .post(`${process.env.REACT_APP_SERVER_URL}/api/articles`, {
+          .post(`${process.env.REACT_APP_SERVER_URL}/articles`, {
             //pass in the object of the new article, containing the actual data that is to be 
             //added, for now it is only the name of the article.
             title: this.state.inputVal,
@@ -84,8 +63,8 @@ class CreateArticle extends Component{
             console.log(error);
           });
       };
-    
-    render(){
+    }
+  
         
     return(
     <div>
@@ -134,10 +113,51 @@ class CreateArticle extends Component{
                 />
                 <p />
                 <input className="submit-button" type="submit" />
+
+
+
+              <h2>
+                <Upload />
+
+              </h2>
             </form> }
         </div>  
     </div>
-    )}
+    )
 }
 
-export default CreateArticle
+
+
+
+
+/////////////Firebase Implementation (not working)/////////////////////////
+        // service firebase.storage {
+        //   match /b/{bucket}/o {
+        //     match /{allPaths=**} {
+        //       allow read, write: if request.auth != null;
+        //     }
+        //   }
+        // }
+//////////////////////////////////////////////////////
+
+      // const { initializeApp } = require('firebase/app');
+      // const { getFirestore, collection, getDocs } = require('firebase/firestore');
+
+      // fileSelectedHandler = event => {
+      //   this.setState({
+      //     selectedFile: event.target.files[0]
+      //   })
+      // }
+      // fileUploadHandler = event => {
+      //   const fd = new FormData();
+      //   fd.append('upload', this.state.selectedFile, this.state.selectedFile.name)
+      //     axios.post('gs://lizzie-37310.appspot.com', fd, {
+      //       onUploadProgress: progressEvent => {
+      //         console.log('Upload Progress: ' + Math.round(progressEvent.loaded / progressEvent.total * 100) + '%')
+      //       }
+      //     })
+      //   .then(res =>{
+      //     console.log(res)
+      //   })
+      // }
+/////////////////////////////////////////////////

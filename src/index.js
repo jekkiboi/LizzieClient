@@ -5,13 +5,21 @@ import App from './App';
 import { BrowserRouter as Router } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import { storage } from './firebase';
+import { Auth0Provider } from "@auth0/auth0-react";
 
 ReactDOM.render(
+  <Auth0Provider
+      domain="dev-w78xv6-p.us.auth0.com"
+      clientId="SdARiyxBTrncLDyvM851IwVpx828hW55"
+      redirectUri={window.location.origin + '/profile'}
+      audience={process.env.REACT_APP_SERVER_URL}
+      >
   <Router>
   <React.StrictMode>
     <App />
   </React.StrictMode>
-  </Router>,
+  </Router>
+  </Auth0Provider>,
   document.getElementById('root')
 );
 
