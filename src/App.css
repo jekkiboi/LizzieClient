@@ -25,29 +25,31 @@
   font-family: 'Open Sans';
   font-weight: 600;   
   color: white;
+  text-decoration:none;
 }
 .articles:hover{
   font-family: 'Open Sans';
   font-weight: 600;   
   color: white;
+  text-decoration:none;
 }
 .generated-articles{
   text-decoration: none;
   color: white;
   font-size:3em;
+  text-decoration:none;
 }
 a{
   display:flex;
-  color: rgb(253, 253, 253);
+  color: rgb(57, 106, 74);
   text-decoration:none;
- 
 }
 a:visited{
-  color: rgb(255, 255, 255);
+  color: rgb(57, 106, 74);
   text-decoration:none;
 }
 a:hover{
-  color: rgb(163, 233, 187);
+  color: rgb(124, 175, 141);
   transition:.3s;
   text-decoration:none;
 }
@@ -86,6 +88,28 @@ a:hover{
   display:flex;
   justify-content: space-between;
 }
+
+
+#basic-nav-dropdown{
+  color: rgb(57, 106, 74);
+  text-decoration:none;
+}
+#basic-nav-dropdown:visited{
+  color: rgb(57, 106, 74);
+  text-decoration:none;
+}
+#basic-nav-dropdown:hover{
+  color: rgb(163, 233, 187);
+  transition:.3s;
+  text-decoration:none;
+}
+
+.dropdown-menu{
+  color:seagreen;
+}
+.public-header{
+margin-top: .2em;
+}
 .inlineheader{
   display:flex;
   justify-content: space-between;
@@ -117,6 +141,7 @@ a:hover{
   transition: 1s;
 }
 .footerlinks{
+  font-family: 'Open Sans';
   margin-top: 1vh;
   bottom:0;
 }
@@ -144,9 +169,7 @@ a:hover{
   display: flex;
   justify-items: space-between;
 }
-.search{
-  padding-right: 2px;
-}
+
 .pics{
   height: 400px;
   width: 450px;
@@ -162,10 +185,10 @@ a:hover{
   border: 1px solid black;
   /* background: grey; */
 }
-.caption{
-  font-family: 'Rock Salt';
-  margin: auto;
-}
+
+
+
+
 .create-post { 
   font-size: 1.1em; 
   width: 200px;
@@ -297,6 +320,17 @@ a.nav-link:hover{
   color: rgb(99, 208, 135);
   transition:.3s;
   text-decoration:none;
+}
+
+.profile{
+  position: center;
+  margin: 0 auto;
+  text-align: center;
+}
+.the-forum{
+  position: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .main-city-show-page{

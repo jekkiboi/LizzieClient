@@ -38,7 +38,7 @@ export default function CreateArticle() {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`
       },
-      body: JSON.stringify({ data: articleData }),
+      body: JSON.stringify({ title: inputVal, content: content, image: inputImage }),
     })
       .then(response => response.json())
       .then(data => {

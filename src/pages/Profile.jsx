@@ -33,6 +33,9 @@ const Profile = () => {
   return (
     isAuthenticated && (
         <div>
+          <br />
+          <br />
+          <br />
       <div className='profile' 
             style={{
             backgroundImage: `url('${process.env.PUBLIC_URL}/images/homebw.jpeg')`
@@ -41,12 +44,13 @@ const Profile = () => {
         <h2>{user.name}</h2>
         <p>{user.email}</p>
       </div>
-      { isAuthenticated ? <Link to="/protectedPage">Your Articles</Link> : "" }
+      <div className='the-forum'>
+      { isAuthenticated ? <Link to="/articles" className='the-forum'>The Forum</Link> : "" }
+      </div>
       </div>
     )
   );
 };
-
 export default Profile;
 
 

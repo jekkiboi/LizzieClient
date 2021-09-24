@@ -1,11 +1,5 @@
-import { Component } from "react";
-import ArticleModel from "../models/ArticleModel";
-import ArticleShowPage from "../pages/ArticleShowPage";
 import { Link } from "react-router-dom";
-// const axios = require('axios').default;
-import axios from "axios";
-// import React, { useEffect } from "react";
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useAuth0 } from "@auth0/auth0-react";
 
 
@@ -13,30 +7,28 @@ export default function ArticlesIndexPage(){
   const { getAccessTokenSilently } = useAuth0()
   const [articleData, setArticleData] = useState([])
 
-  async function handleSubmit(e){
-    const token = await getAccessTokenSilently()
-    e.preventDefault()
+  useEffect (() => {
 
-  fetch(`${process.env.REACT_APP_SERVER_URL}/articles`, {
-    //This code was what was here before 
-    //I need to use the article model sooo...ya:
-    //ArticleModel.all().then((data) => { },
-    method: 'POST',
-    mode: 'cors',
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization' : `Bearer ${token}`
-    },
-    body: JSON.stringify({ data: articleData }),
-  })
-      .then(response => response.json())
-      .then(data => {
+  async function getArticles() {
+    const serverUrl = process.env.REACT_APP_SERVER_URL
+    const token = await getAccessTokenSilently()
+    console.log(token)
+
+  
+
+    fetch(serverUrl + '/articles', {headers: { 'Authorization': `Bearer ${token}` }  })
+        .then(response => response.json())
+        
+        .then(data => {
+          setArticleData(data)
           console.log(data)
-      })
-      .catch(err => {
-          console.log(err)
-    });
-  };
+        })
+        .catch(err => {
+            console.log(err)
+        });
+    }
+    getArticles()
+  }, [getAccessTokenSilently])
 
 //lifecycle method the runs automatically when the component loads
   // componentDidMount = () => {

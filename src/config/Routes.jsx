@@ -15,7 +15,7 @@ import ProtectedRoute from '../auth/ProtectedRoute'
 import NotFound from '../pages/NotFound';
 
 
-function Routes(){
+function Routes(props){
   
     return(
         <Switch>
@@ -24,9 +24,9 @@ function Routes(){
           
         {/* <Route path='/articles/:id' exact component={ArticleShowPage} /> */}
 
-        <Route exact path='/articles/:id'render={(props)=> <ArticleShowPage {...props} />} />
+        <ProtectedRoute path='/articles/:id'component={ArticleShowPage} />
         
-        <Route path='/articles' component={ArticlesIndexPage} />
+        <ProtectedRoute path='/articles' component={ArticlesIndexPage} />
 
         <ProtectedRoute exact path='/profile' component={Profile}/>
 
@@ -34,7 +34,7 @@ function Routes(){
 
         <Route exact path='/about' component={About} />
 
-        <Route path='/create' render={(props) => <CreateArticle {...props} /> } />
+        <ProtectedRoute path='/create' component={CreateArticle} />
 
         {/* <Route path='/signup' render={(props) => <SignupPage {...props} /> } /> */}
 

@@ -35,14 +35,13 @@ function Header() {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
-                    <Link to="/about">About</Link>
-                    <Link to="/articles">Articles</Link>
                     <NavDropdown.Divider />
-                    <NavDropdown title="PIC" id="basic-nav-dropdown" >
-                    {/* <NavDropdown.Item href="./login" className='lank'>{ navItems }</NavDropdown.Item> */}
+                    <Link to="/about" className='public-header'>About</Link>
+                    &nbsp;
+                    <Link to="/articles" className='public-header'>Articles</Link>
+                    <NavDropdown title="Lizzie" id="basic-nav-dropdown" >
+                       {/* <img className='tiny-logobanner'src={`${process.env.PUBLIC_URL}/images/EL.png`}/> */}
                     { navItems }
-                    {/* <NavDropdown.Item href="./login" className='lank'>LL</NavDropdown.Item>
-                    <NavDropdown.Item href="./signup" className='lank'>SS</NavDropdown.Item> */}
                     <NavDropdown.Divider />
                   </NavDropdown>
 
