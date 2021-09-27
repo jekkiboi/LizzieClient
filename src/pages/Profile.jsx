@@ -10,12 +10,12 @@ const Profile = () => {
     //user.sub is the unique identifier for the user
     //we want to use that and send it to the express server to create a user in the user model
     fetch(`${process.env.REACT_APP_SERVER_URL}/auth`, {
-      method:'POST',
+      method: 'POST',
       mode: 'cors',
       headers: {
-        'Content-Type' : 'application/json'
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ auth0Id: user.sub})
+      body: JSON.stringify({ auth0Id: user.sub })
     })
       .then(response => response.json())
       .then(data => {
@@ -32,21 +32,43 @@ const Profile = () => {
 
   return (
     isAuthenticated && (
-        <div>
+      <div>
+        <div className='app-index'
+          style={{
+            backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg3leafless.png')`,
+            backgroundPosition: "bottom",
+            backgroundSize: "fill"
+          }}>
           <br />
           <br />
           <br />
-      <div className='profile' 
-            style={{
-            backgroundImage: `url('${process.env.PUBLIC_URL}/images/homebw.jpeg')`
-            }}>
-        <img src={user.picture} alt={user.name} />
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-      </div>
-      <div className='the-forum'>
-      { isAuthenticated ? <Link to="/articles" className='the-forum'>The Forum</Link> : "" }
-      </div>
+          <br />
+          <br />
+          <br />
+          <div className="navigate">
+            <div className='column-2'>
+              <br />
+              <img className='user-picture' src={user.picture} alt={user.name} />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <h3 className='user-name'>Username: {user.name}</h3>
+              <h3 className='user-email'>Email: {user.email}</h3>
+              <div className='the-forum'>
+                {isAuthenticated ? <Link to="/articles" className='the-forum'>Enter Forum</Link> : ""}
+          </div>
+            </div>
+            <div className='column-1'>
+              <h3 className='your-profile'>Your </h3>
+              <h3 className='your-profile'> Profile</h3>
+            </div>
+          </div>
+          
+        </div>
+        
       </div>
     )
   );
@@ -55,16 +77,3 @@ export default Profile;
 
 
 
-///////////////Old Home////////////
-// import React from 'react'
-// function Profile(){
-//     return(
-//         <div className='profile' 
-//             style={{
-//                 backgroundImage: `url('${process.env.PUBLIC_URL}/images/homebw.jpeg')`
-//             }}>
-//         </div>
-//     )
-// }
-// export default Profile
-///////////End Old Home////////////////

@@ -14,8 +14,6 @@ export default function ArticlesIndexPage(){
     const token = await getAccessTokenSilently()
     console.log(token)
 
-  
-
     fetch(serverUrl + '/articles', {headers: { 'Authorization': `Bearer ${token}` }  })
         .then(response => response.json())
         
@@ -30,40 +28,43 @@ export default function ArticlesIndexPage(){
     getArticles()
   }, [getAccessTokenSilently])
 
-//lifecycle method the runs automatically when the component loads
-  // componentDidMount = () => {
-  //   console.log("mounted");
-  //   //make fetch called here, or at least reference the game model which has it
-  //   this.fetchData();
-  // };
 
     return (
         <div
-        className="main"
+        className="app-index"
         style={{
-            backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg.png')`,
-            backgroundPosition: "bottom",
-        }}
+            backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg3leaf.png')`,
+            backgroundSize: 'cover',
+          }}
         >
+          <div className='article-index-body'>
+            <br />
           <span className='add-article'> 
-            <h3 className='add-article-title'>Add an Article</h3>
-            <div>
+           
+            <h3 className='add-article-title'>The Forum</h3>
+            <div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <Link  to="/create"> 
                     <img className='plus-sign' src={`${process.env.PUBLIC_URL}/images/plussign.png`} />
                 </Link>  
             </div>
             </span>
+           
+          
             <div className="generated-articles">
+              
+
+              <ul className= 'articles-again'>
               {articleData.map((articleObj, i)=> {
                   return<Link to={`/articles/${articleObj._id}`} key={i}>{articleObj.title}</Link>
               })}
+              </ul>
+              <div></div>
+              <div></div>
+            </div>
             </div>
         </div>
     )};
   
-
-
-
 
 // Steps to render the list of Articles
 // - Create a component for each Article

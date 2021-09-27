@@ -14,7 +14,7 @@ function App() {
     <div 
     className='app-index' 
     style={{
-      backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg.png')`,
+      // backgroundImage: `url('${process.env.PUBLIC_URL}/images/GrassS.png')`,
     }}
     >
       <Header/>
