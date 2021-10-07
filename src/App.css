@@ -40,9 +40,32 @@
   font-weight:400;
 }
 .public-header:hover{
-  color: rgb(251, 253, 252);
+  color: rgb(233, 249, 241);
   transition:.5s;
-  text-shadow: none;
+  text-shadow: .25px .25px 0 #050,
+  -.25px .25px 0 #050,
+  .25px -.25px 0 #050,
+  -.25px -.25px 0 #050,
+  0px .25px 0 #050,
+  0px -.25px 0 #050,
+  -.25px 0px 0 #050,
+  .25px 0px 0 #050,
+  .5px .5px 0 #050,
+  -.5px .5px 0 #050,
+  .5px -.5px 0 #050,
+  -.5px -.5px 0 #050,
+  0px .5px 0 #050,
+  0px -.5px 0 #050,
+  -.5px 0px 0 #050,
+  .5px 0px 0 #050,
+  .25px .5px 0 #050,
+  -.25px .5px 0 #050,
+  .25px -.5px 0 #050,
+  -.25px -.5px 0 #050,
+  .5px .25px 0 #050,
+  -.5px .25px 0 #050,
+  .5px -.25px 0 #050,
+  -.5px -.25px 0 #050; 
   text-decoration:none;
   font-weight:700;
   -webkit-transform: scale(1.2);
@@ -134,7 +157,7 @@ margin-top: .35em;
     font-weight: 900;
 }
 .nav-link:hover{
-  color: rgb(251, 253, 252);
+  color: rgb(158, 182, 170);
   transition:.5s;
   text-shadow: none;
   text-decoration:none;
@@ -273,12 +296,14 @@ margin-top: .35em;
   display:flex;
 }
 .line-em-up{
-  display: inline-flex;
+  display: inline-flex;   
+  margin-top: -2vh;
+
 }
   
   .facebook-logo{
     display: inline-flex;
-    margin-top: 1vh;
+    /* margin-top: 1vh; */
     height: 3vh;
   }
 .react-share_ShareButton{
@@ -324,6 +349,12 @@ h2{
 
 .app-index{
   min-height: 80em;
+  background-color:rgb(215, 244, 222);
+  /* background-size: cover; */
+}
+.home-index{
+  min-height: 80em;
+  background-color:rgb(215, 244, 222);
   background-size: cover;
 }
 .imageandtext p{
@@ -514,24 +545,51 @@ filter:grayscale(0%);
 }
 
 
-
-
-
 /* article index page */
 .add-article{
   display:flex;
   margin: 0 auto;
-  margin-top: 25vh;
+  margin-top: 14vh;
 }
 .add-article-title{
   color:rgb(245, 250, 247);
   font-size: 6em;
   font-weight:600;
   text-decoration:none;
+  margin-left: 3vh;
+  text-shadow: .25px .25px 0 #050,
+  -.25px .25px 0 #050,
+  .25px -.25px 0 #050,
+  -.25px -.25px 0 #050,
+  0px .25px 0 #050,
+  0px -.25px 0 #050,
+  -.25px 0px 0 #050,
+  .25px 0px 0 #050,
+  .5px .5px 0 #050,
+  -.5px .5px 0 #050,
+  .5px -.5px 0 #050,
+  -.5px -.5px 0 #050,
+  0px .5px 0 #050,
+  0px -.5px 0 #050,
+  -.5px 0px 0 #050,
+  .5px 0px 0 #050,
+  .25px .5px 0 #050,
+  -.25px .5px 0 #050,
+  .25px -.5px 0 #050,
+  -.25px -.5px 0 #050,
+  .5px .25px 0 #050,
+  -.5px .25px 0 #050,
+  .5px -.25px 0 #050,
+  -.5px -.25px 0 #050; 
 }
 .plus-sign{
   width: 5em;
-  margin-top: 1em;
+  margin-top: 1.3em;
+}
+.reef{
+  margin-left: 4vh;
+  font-size:x-large;
+  font-weight: 600;
 }
 
 .navigate-create {
@@ -661,27 +719,52 @@ background-repeat:repeat;
 
 .tagline{
   font-family: 'Open Sans';
-  color:rgb(49, 85, 28);
+  color:rgb(173, 221, 60);
   margin: 0 auto;
   text-align:center;
   font-weight: 600;
+  text-shadow: .25px .25px 0 #050,
+  -.25px .25px 0 #050,
+  .25px -.25px 0 #050,
+  -.25px -.25px 0 #050,
+  0px .25px 0 #050,
+  0px -.25px 0 #050,
+  -.25px 0px 0 #050,
+  .25px 0px 0 #050,
+  .5px .5px 0 #050,
+  -.5px .5px 0 #050,
+  .5px -.5px 0 #050,
+  -.5px -.5px 0 #050,
+  0px .5px 0 #050,
+  0px -.5px 0 #050,
+  -.5px 0px 0 #050,
+  .5px 0px 0 #050,
+  .25px .5px 0 #050,
+  -.25px .5px 0 #050,
+  .25px -.5px 0 #050,
+  -.25px -.5px 0 #050,
+  .5px .25px 0 #050,
+  -.5px .25px 0 #050,
+  .5px -.25px 0 #050,
+  -.5px -.25px 0 #050; 
 }
 .lizzie-sun{
   padding: 1vh;
-  width: 80vw;
+  width: 55vw;
   display: flex;
   margin: 0 auto;
+  margin-top: 12vh;
   /* height:20px; */
 }
 
 .generated-articles{
-  display:flex;
+  /* display:flex;
   justify-content: space-between;
   columns: auto;
   width: 40%;
   padding: 10px;
   font-size: xx-large;
-  margin-left: 3em;
+  margin-left: 3em; */
 }
 .articles-again{
   columns: 1 auto;

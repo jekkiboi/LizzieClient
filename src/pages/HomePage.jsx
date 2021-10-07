@@ -6,8 +6,9 @@ function Home() {
 //    const { isAuthenticated } = useAuth0()
     return (
         <div>
-        <div className='app-index' style={{
-            backgroundImage: `url('${process.env.PUBLIC_URL}/images/GrassS.png')`,
+        <div className='home-index' style={{
+            backgroundImage: `url('${process.env.PUBLIC_URL}/images/tropical.jpeg')`,
+            backgroundPosition: "bottom",
             backgroundSize: "fill"
         }}>
             <br />
@@ -16,8 +17,9 @@ function Home() {
             <br />
             <br />
             <br />
-            <img className='lizzie-sun' src={process.env.PUBLIC_URL + '/images/lizzieSun.png'} alt=""/>
-            <h1 className='tagline'>(For Reptile Lovers Only)</h1>
+            <br />
+            <img className='lizzie-sun' src={process.env.PUBLIC_URL + '/images/lizzienotrees.png'} alt=""/>
+            <h1 className='tagline'>A Place for Reptile Lovers</h1>
             
         </div>
         </div>

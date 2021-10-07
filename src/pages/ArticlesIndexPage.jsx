@@ -48,18 +48,15 @@ export default function ArticlesIndexPage(){
                 </Link>  
             </div>
             </span>
-           
-          
-            <div className="generated-articles">
-              
 
-              <ul className= 'articles-again'>
+            <div className="generated-articles">
+
+              <ul className='reef'>
               {articleData.map((articleObj, i)=> {
-                  return<Link to={`/articles/${articleObj._id}`} key={i}>{articleObj.title}</Link>
+                  return<li><Link className= 'articles-again' to={`/articles/${articleObj._id}`} key={i}>{articleObj.title}</Link></li>
               })}
               </ul>
-              <div></div>
-              <div></div>
+
             </div>
             </div>
         </div>
