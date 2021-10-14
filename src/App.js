@@ -8,14 +8,10 @@ import { bounce } from 'react-animations'
 
 function App() {
 
-
-
   return (
     <div 
     className='app-index' 
-    style={{
-      // backgroundImage: `url('${process.env.PUBLIC_URL}/images/GrassS.png')`,
-    }}
+    style={{ }}
     >
       <Header/>
       <Routes/>

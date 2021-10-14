@@ -12,6 +12,7 @@ function Footer(){
                 <span className='footerlinks'>
                     <div className='footerlinklist'>
                     <SocialSharer />
+                    &nbsp;  
                     </div>
                 </span>
             </span>

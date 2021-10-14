@@ -110,13 +110,13 @@ margin-top: .35em;
 }
 .logobanner {
   display: inline;
-  width: 4.5em;
-  height: 4em;
+  width: 3.5em;
+  height: 3em;
 }
 .logobanner:hover{
   display: inline;
-  width: 5.5em;
-  height: 5em;
+  width: 3.75em;
+  height: 3.25em;
   transition: 1s;
 }
 /* dropdown menu  */
@@ -750,11 +750,16 @@ background-repeat:repeat;
 }
 .lizzie-sun{
   padding: 1vh;
-  width: 44vw;
+  width: 60%;
   display: flex;
   margin: 0 auto;
-  margin-top: 12vh;
+  margin-top: 10vh;
   /* height:20px; */
+}
+
+.loginlog{
+  width: 20%;
+  margin-left: 50vw;
 }
 
 .generated-articles{

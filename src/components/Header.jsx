@@ -23,7 +23,7 @@ function Header() {
           </>
        )
   }else{
-      // If not looged in, show the login button
+      // If not logged in, show the login button
       navItems = ( <span className="drop-menu-login" onClick={() => loginWithRedirect()}>Log In</span> )
   }
  
