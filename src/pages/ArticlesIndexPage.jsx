@@ -44,7 +44,7 @@ export default function ArticlesIndexPage(){
             <h3 className='add-article-title'>The Forum</h3>
             <div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <Link  to="/create"> 
-                    <img className='plus-sign' src={`${process.env.PUBLIC_URL}/images/plussign.png`} />
+                    <img className='plus-sign' src={`${process.env.PUBLIC_URL}/images/plussign.png`}  alt="plus-sign" />
                 </Link>  
             </div>
             </span>

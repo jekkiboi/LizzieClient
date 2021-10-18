@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import Dropdown from "react-bootstrap/Dropdown";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -32,7 +31,7 @@ function Header() {
       <div className='header'>
         <span className='inlineheader'>
           <Link to="/">
-            <img className='logobanner'src={`${process.env.PUBLIC_URL}/images/Ldot.png`}/>
+            <img className='logobanner'src={`${process.env.PUBLIC_URL}/images/Ldot.png`} alt="background"/>
           </Link>
           <span className="headerlinks">
             <Navbar expand="lg">

@@ -8,7 +8,6 @@ import { Widget } from "@uploadcare/react-widget";
 
 export default function CreateArticle() {
   const { getAccessTokenSilently } = useAuth0()
-  const [articleData, setArticleData] = useState([])
   const [inputVal, setInputVal] = useState('')
   const [content, setContent] = useState('')
   const [inputImage, setInputImage] = useState('')
@@ -53,7 +52,7 @@ export default function CreateArticle() {
         console.log(err)
       })
   }
-  if(redirect == true){
+  if(redirect === true){
     return(
      <Redirect to="/articles" /> 
     )
@@ -85,7 +84,7 @@ export default function CreateArticle() {
               value={inputVal}
               onChange={handleChange}
             />
-            <h2></h2>
+            
             <textarea
               rows="4"
               className="input-content"

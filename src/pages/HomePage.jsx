@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
 
 
 function Home() {
-    const { loginWithRedirect, isAuthenticated } = useAuth0();
 
  
     return (
@@ -25,7 +23,7 @@ function Home() {
             <div>
                 <br />
             <Link to='/profile'>
-            <img className='loginlog'src={`${process.env.PUBLIC_URL}/images/login.png`}/>
+            <img className='loginlog'src={`${process.env.PUBLIC_URL}/images/login.png`} alt=""/>
             </Link>
             </div>
             

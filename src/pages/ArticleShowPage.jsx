@@ -1,12 +1,9 @@
 import "../articleShowPage.css";
 import React from "react";
 import axios from "axios";
-import ArticleModel from "../models/ArticleModel";
 import { Link, Redirect } from "react-router-dom";
 import { useState, useEffect } from "react"
 import { useAuth0 } from '@auth0/auth0-react'
-import { Widget } from "@uploadcare/react-widget";
-
 
 export default function ArticleShowPage(props) {
   console.log('this is them proppies', props)
@@ -16,7 +13,7 @@ export default function ArticleShowPage(props) {
 
   /////////NEED BOTH DELETE FUNCTIONS/////////////
   async function deleteArticle() {
-    const serverUrl = process.env.REACT_APP_SERVER_URL
+    //used to have const serverUrl like in useEffect function on this line
     const token = await getAccessTokenSilently()
     axios.delete(`${process.env.REACT_APP_SERVER_URL}${props.location.pathname}`,{
       headers: {
@@ -55,7 +52,7 @@ export default function ArticleShowPage(props) {
     };
     getArticles()
   }, [getAccessTokenSilently])
-  if (redirect == true) {
+  if (redirect === true) {
     return (
       <Redirect to="/articles" />
     )
