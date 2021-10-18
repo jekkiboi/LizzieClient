@@ -293,13 +293,12 @@ margin-top: .35em;
   display: inline-flex;   
   margin-top: -2vh;
 
+} 
+.facebook-logo{
+  display: inline-flex;
+  /* margin-top: 1vh; */
+  height: 3vh;
 }
-  
-  .facebook-logo{
-    display: inline-flex;
-    /* margin-top: 1vh; */
-    height: 3vh;
-  }
 .react-share_ShareButton{
   display: flex;
 }
@@ -321,7 +320,6 @@ margin-top: .35em;
   border: 1px solid black;
   /* background: grey; */
 }
-
 .create-post { 
   font-size: 1.1em; 
   width: 200px;
@@ -330,7 +328,7 @@ margin-top: .35em;
   color: black;
 }
 .input-content {
-  width:400px;
+  width:70vw;
   font-size:14pt;
   color: black;
 }
@@ -340,11 +338,15 @@ h1{
 h2{
   color: rgba(243, 243, 245);
 }
+.uploadcare--widget__button uploadcare--widget__button_type_open{
+  background-color: cadetblue;
+}
+
 
 .app-index{
+  background-size: cover;
   min-height: 80em;
   background-color:rgb(215, 244, 222);
-  /* background-size: cover; */
 }
 .home-index{
   min-height: 80em;
@@ -416,7 +418,7 @@ filter:grayscale(0%);
 }
 .column-2{
   text-align: left;
-  margin-left: 8vw;
+  margin-left: 4vw;
 }
 .profile{
   background-position:fixed;
@@ -440,7 +442,7 @@ filter:grayscale(0%);
 }
 .user-name{
   font-family: 'Open Sans';
-  margin-top: -12vh;
+  margin-top: -10vh;
   color:rgb(44, 75, 54);
   text-shadow: .25px .25px 0 #050,
   -.25px .25px 0 #050,
@@ -546,7 +548,7 @@ filter:grayscale(0%);
   margin-top: 14vh;
 }
 .add-article-title{
-  color:rgb(245, 250, 247);
+  color:rgb(253, 255, 254);
   font-size: 6em;
   font-weight:600;
   text-decoration:none;
@@ -579,6 +581,7 @@ filter:grayscale(0%);
 .plus-sign{
   width: 5em;
   margin-top: 1.3em;
+
 }
 .reef{
   margin-left: 4vh;
@@ -586,12 +589,9 @@ filter:grayscale(0%);
   font-weight: 600;
 }
 
-.navigate-create {
-  display:flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 10px;
-}
+
+
+
 .create-title{
   display:flex;
   color:rgb(254, 254, 254);
@@ -601,12 +601,19 @@ filter:grayscale(0%);
   margin: 0 auto;
   justify-content: center;
 }
-.create-column-1{
-margin-left: 6em;
+
+/* create article page */
+
+.navigate-create {
+  font-size: 2.8vh;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1vw;
 }
-.create-column-2{
-  margin-right: 1em;
-  }
+.create-column-1{
+margin-left: 10%;
+}
+
 .or-upload{
 font-size: 1.4em;
 }

@@ -111,9 +111,7 @@ export default function CreateArticle() {
           </p>
           <input className="submit-button" type="submit" />
           </div>
-          <div className="create-column-2">
-          <h1 className='create-title'>Post</h1>
-        </div>
+
         </div>
           </form>
         </div>
