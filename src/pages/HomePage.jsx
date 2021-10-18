@@ -20,7 +20,7 @@ function Home() {
             <br />
             <br />
             <br />
-            <img className='lizzie-sun' src={process.env.PUBLIC_URL + '/images/lizzieShad.png'} alt=""/>
+            <img className='lizzie-sun' src={process.env.PUBLIC_URL + '/images/blah.png'} alt=""/>
             <h1 className='tagline'>A Place for Reptile Lovers</h1>
             <div>
                 <br />
