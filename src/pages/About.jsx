@@ -6,7 +6,7 @@ function About(){
         <div
       className="app-index"
       style={{
-          backgroundImage: `url('${process.env.PUBLIC_URL}/images/Grassreverse.png')`,
+          backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg2.png')`,
           backgroundSize: "fill",
       }}>
             <br />
@@ -19,7 +19,6 @@ function About(){
             <br />
             <br />
             <h1 className="who-we-are">Who We Are</h1>
-            
             <h4 className='about-body'>Lizzie is an app designed for reptile lovers everywhere. 
                  We hope that this app allows you to 
                 connect, find friends, and be a little more of a knowledgable pet owner.
@@ -27,5 +26,4 @@ function About(){
         </div>
     )
 }
-    
 export default About

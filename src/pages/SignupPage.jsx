@@ -21,9 +21,7 @@ class SignupPage extends React.Component {
         .catch(function (error) {
           console.log(error);
         });
-      
     };
-
   handleUsernameChange = (event) => {
     this.setState({ username: event.target.value });
   };

@@ -1,8 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Bellota+Text&display=swap'); */
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-
 
 .public-header{
   display:flex;
@@ -72,15 +68,13 @@
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
-
 #basic-nav-dropdown:hover{
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-
-/* header */
+/* Header Styling */
 .public-header{
 margin-top: .35em;
 }
@@ -113,7 +107,7 @@ margin-top: .35em;
   height: 3.25em;
   transition: 1s;
 }
-/* dropdown menu  */
+/* Dropdown Menu Styling  */
 .nav-link{
   color: rgb(49, 85, 28);
   font-weight: 900;
@@ -160,7 +154,6 @@ margin-top: .35em;
   -ms-transform: scale(1.2);
   transform: scale(1.2);
 }
-
 .dropdown-menu.show{
   /* display:flexbox; */
   opacity:80%;
@@ -208,7 +201,6 @@ margin-top: .35em;
   transition:.5s;
   text-decoration:none;
 }
-
 .drop-menu-login{
   display:flex;
   justify-content:center;
@@ -504,7 +496,6 @@ filter:grayscale(0%);
   font-weight:600;
   text-decoration:none;
 }
-
 .the-forum:hover{
   display:flex;
   margin: 0 auto;
@@ -589,9 +580,6 @@ filter:grayscale(0%);
   font-weight: 600;
 }
 
-
-
-
 .create-title{
   display:flex;
   color:rgb(254, 254, 254);
@@ -603,7 +591,6 @@ filter:grayscale(0%);
 }
 
 /* create article page */
-
 .navigate-create {
   font-size: 2.8vh;
   justify-content: space-between;
@@ -636,16 +623,10 @@ a:hover{
   color: white;
 }
 
-
-
 /* article show page */
 div.article-show {
-  /* text-align: center; */
-  /* display: grid; */
-  /* grid-template-columns: 1fr 290px 1fr; */
   width: 100%;
   padding: auto 3vh;
-  /* align-items: center; */
 }
 .article-show-bg{
 min-height: 100em;
@@ -663,7 +644,6 @@ background-repeat:repeat;
   margin: 0 auto;
   padding:2vh;
 }
-
 .delete-button {
   background-color: rgba(252, 252, 252, 0);
   border: 0;
@@ -671,15 +651,11 @@ background-repeat:repeat;
   margin: auto;
   padding: 3vh;
   font-size: 1.2em;
-  /* width: 100px; */
 }
 .delete-button:hover {
   color: rgb(178, 228, 195);
   transition: .5s;
 }
-
-
-
 
 .sign-up-form-css {
   font-family: 'Open Sans';
@@ -785,14 +761,12 @@ background-repeat:repeat;
 }
 
 
-
-
 /* about page */
 .who-we-are{
   display:flex;
   justify-content: center;
   color:rgb(44, 75, 54);
-  font-size: 15vh;
+  font-size: 10vw;
   font-weight:600;
   text-decoration:none;
   margin: 0 auto;
@@ -802,8 +776,9 @@ background-repeat:repeat;
   font-size:4vw;
   display:flex;
   justify-content: center;
-  padding: 30vh;
-  padding-top: 0%
+  padding: 10vw;;
+  padding-top: 0%;
+  color: white;
 }
 
 /* Sharing Icons  */
@@ -811,27 +786,23 @@ background-repeat:repeat;
 .resp-sharing-button__icon {
   display: inline-block
 }
-
 .resp-sharing-button__link {
   text-decoration: none;
   color: #fff;
   margin: 0.5em
 }
-
 .resp-sharing-button {
   border-radius: 5px;
   transition: 25ms ease-out;
   padding: 0.5em 0.75em;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif
 }
-
 .resp-sharing-button__icon svg {
   width: 1em;
   height: 1em;
   margin-right: 0.4em;
   vertical-align: top
 }
-
 .resp-sharing-button--small svg {
   margin: 0;
   vertical-align: middle
@@ -849,27 +820,21 @@ background-repeat:repeat;
   fill: #fff;
   stroke: none
 }
-
 .resp-sharing-button--twitter {
   background-color: #55acee
 }
-
 .resp-sharing-button--twitter:hover {
   background-color: #2795e9
 }
-
 .resp-sharing-button--pinterest {
   background-color: #bd081c
 }
-
 .resp-sharing-button--pinterest:hover {
   background-color: #8c0615
 }
-
 .resp-sharing-button--facebook {
   background-color: #3b5998
 }
-
 .resp-sharing-button--facebook:hover {
   background-color: #2d4373
 }

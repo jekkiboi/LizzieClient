@@ -35,28 +35,24 @@ export default function ArticlesIndexPage(){
         style={{
             backgroundImage: `url('${process.env.PUBLIC_URL}/images/bg3leaf.png')`,
             backgroundSize: 'cover',
-          }}
-        >
+          }}>
           <div className='article-index-body'>
             <br />
-          <span className='add-article'> 
-           
-            <h3 className='add-article-title'>The Forum</h3>
-            <div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <Link  to="/create"> 
-                    <img className='plus-sign' src={`${process.env.PUBLIC_URL}/images/plussign.png`}  alt="plus-sign" />
-                </Link>  
-            </div>
+            <span className='add-article'> 
+              <h3 className='add-article-title'>The Forum</h3>
+              <div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <Link  to="/create"> 
+                      <img className='plus-sign' src={`${process.env.PUBLIC_URL}/images/plussign.png`}  alt="plus-sign" />
+                  </Link>  
+              </div>
             </span>
 
             <div className="generated-articles">
-
               <ul className='reef'>
-              {articleData.map((articleObj, i)=> {
-                  return<li><Link className= 'articles-again' to={`/articles/${articleObj._id}`} key={i}>{articleObj.title}</Link></li>
-              })}
+                {articleData.map((articleObj, i)=> {
+                    return<li><Link className= 'articles-again' to={`/articles/${articleObj._id}`} key={i}>{articleObj.title}</Link></li>
+                })}
               </ul>
-
             </div>
             </div>
         </div>
