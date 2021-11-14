@@ -10,7 +10,7 @@ function SocialSharer() {
             <Segment>
                 <FacebookShareButton url="https://www.facebook.com/Lizzie-105329358581012">
                     <div className="facebook-logo">
-                        <FacebookIcon logoFillColor="white" round={true}></FacebookIcon>  
+                        <FacebookIcon  round={true}></FacebookIcon>  
                     </div>
                 </FacebookShareButton>
             </Segment>
@@ -18,7 +18,7 @@ function SocialSharer() {
             <Segment>
                 <RedditShareButton url="https://www.reddit.com/">
                     <div className="facebook-logo">
-                        <RedditIcon logoFillColor="white" round={true}></RedditIcon>  
+                        <RedditIcon  round={true}></RedditIcon>  
                     </div>
                 </RedditShareButton>
             </Segment>
