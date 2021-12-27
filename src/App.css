@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-
+.public-header1{
+  display:flex;
+  color: rgb(49, 85, 28);
+  text-decoration:none;
+  font-weight:400;
+  margin-top: .45em;
+}
 .public-header{
   display:flex;
   color: rgb(49, 85, 28);
@@ -333,7 +339,6 @@ h2{
 .uploadcare--widget__button uploadcare--widget__button_type_open{
   background-color: cadetblue;
 }
-
 
 .app-index{
   background-size: cover;

@@ -15,12 +15,12 @@ function Home() {
             <br />
             <br />
             <br />
-                <img className='lizzie-sun' src={process.env.PUBLIC_URL + '/images/liz.png'} alt=""/>
+                <img className='lizzie-sun' src={process.env.PUBLIC_URL + '/images/liz.png'} alt="lizzie"/>
                 <h1 className='tagline'>A Place for Reptile Lovers</h1>
             <br />
                 <div>
                     <Link to='/profile'>
-                        <img className='loginlog'src={`${process.env.PUBLIC_URL}/images/login.png`} alt=""/>
+                        <img className='loginlog'src={`${process.env.PUBLIC_URL}/images/login.png`} alt="login"/>
                     </Link>
                 </div>
             </div>

@@ -12,7 +12,7 @@ import NotFound from '../pages/NotFound';
 
 
 function Routes(props){
-  
+  //Switch has now turned into Routes
     return(
         <Switch>
 

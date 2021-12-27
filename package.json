@@ -33,7 +33,7 @@
     "uuid": "^8.3.2",
     "web-vitals": "^1.1.2"
   },
-  "description": "frontend for Lizzie Appp",
+  "description": "Frontend for the Lizzie App",
   "engines": {
     "node": "14.17.4",
     "npm": "8.1.3"

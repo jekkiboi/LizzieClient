@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+// import Navbar from "react-bootstrap/Navbar";
+// import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -32,22 +32,13 @@ function Header() {
             <img className='logobanner'src={`${process.env.PUBLIC_URL}/images/Ldot.png`} alt="background"/>
           </Link>
           <span className="headerlinks">
-            <Navbar expand="lg">
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="me-auto">
-                    <NavDropdown.Divider />
-                    <NavDropdown title="" id="basic-nav-dropdown" >
+                      <div className='public-header1'>
                       { navItems }
-                      <NavDropdown.Divider />
-                    </NavDropdown>
-                    &nbsp;
+                      </div>
+                    &nbsp; &nbsp;
                     <Link to="/about" className='public-header'>About</Link>
                     &nbsp;&nbsp;
                     <Link to="/articles" className='public-header'>Articles</Link>
-                </Nav>
-              </Navbar.Collapse>
-            </Navbar>
             &nbsp; &nbsp;
           </span>
         </span>
