@@ -6,7 +6,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { Redirect } from 'react-router-dom'
 import { Widget } from "@uploadcare/react-widget";
 
-export default function CreateArticle() {
+function CreateArticle() {
   const { getAccessTokenSilently } = useAuth0()
   const [inputVal, setInputVal] = useState('')
   const [content, setContent] = useState('')
@@ -119,4 +119,4 @@ export default function CreateArticle() {
   }
 }
 
-
+export default CreateArticle
